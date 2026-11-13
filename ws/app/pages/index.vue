@@ -1,12 +1,15 @@
 <template>
   <main>
-      <HeroSction />
-      <SkillsSection />
-      <AboutMeSection />
-      <ProjectSection />
-      <ServiceSection />
-      <ExperienceSection/>
-      <ConnectSection />
+      <HeroSction :profile="portfolioData?.profile" />
+      <SkillsSection :skills="portfolioData?.skills" />
+      <AboutMeSection :about="portfolioData?.about" />
+      <ProjectSection :projects="portfolioData?.projects" />
+      <ServiceSection :services="portfolioData?.services" />
+      <ExperienceSection
+        :work-experiences="portfolioData?.workExperiences"
+        :educations="portfolioData?.educations"
+      />
+      <ConnectSection :contact="portfolioData?.contact" />
   </main>
 </template>
 
@@ -19,6 +22,7 @@ import ProjectSection from '~/components/home/ProjectSection.vue';
 import ServiceSection from '~/components/home/ServiceSection.vue';
 import SkillsSection from '~/components/home/SkillsSection.vue';
 
+import { usePortfolioApi } from '~/composables/usePortfolioApi';
 import {
   siteMetaConfig,
   heroProfileData,
@@ -26,6 +30,9 @@ import {
   contactInfoData,
   projectsData
 } from '~/model'
+
+const { fetchPortfolioBundle } = usePortfolioApi()
+const { data: portfolioData } = await fetchPortfolioBundle()
 
 const { siteUrl, title, description, keywords, author, ogImage, twitterHandle } = siteMetaConfig
 

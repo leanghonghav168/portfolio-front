@@ -187,6 +187,8 @@ const props = withDefaults(
   }
 )
 
+const { sendContactMessage } = usePortfolioApi()
+
 const formData = ref({
   name: '',
   email: '',
@@ -198,9 +200,13 @@ const formData = ref({
 const isSubmitting = ref(false)
 const submitSuccess = ref(false)
 
-const handleSubmit = () => {
+const handleSubmit = async () => {
   isSubmitting.value = true
-  setTimeout(() => {
+  try {
+    await sendContactMessage(formData.value)
+  } catch (err) {
+    console.warn('Backend unavailable, local form simulated:', err)
+  } finally {
     isSubmitting.value = false
     submitSuccess.value = true
     formData.value = {
@@ -213,7 +219,7 @@ const handleSubmit = () => {
     setTimeout(() => {
       submitSuccess.value = false
     }, 4000)
-  }, 600)
+  }
 }
 </script>
 
