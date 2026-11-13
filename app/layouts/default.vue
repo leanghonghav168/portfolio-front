@@ -9,8 +9,7 @@
     <!-- Main Content -->
     <slot />
 
-    <!-- Contact & Footer -->
-    <ContactSection />
+    <!-- Footer -->
     <AppFooter />
 
     <!-- Scroll To Top Indicator -->

@@ -76,40 +76,24 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
+import { navItems } from '~/model'
 
 defineEmits(['open-sidebar'])
 
+const colorMode = useColorMode()
+
 const isScrolled = ref(false)
 const mobileNavOpen = ref(false)
-const isDark = ref(false)
 
-const navItems = [
-  {
-    label: 'Home',
-    href: '/',
-    subMenu: [
-      { label: 'Home One', href: '/' },
-      { label: 'Home Two', href: '/#home-2' }
-    ]
+const isDark = computed({
+  get() {
+    return colorMode.value === 'dark'
   },
-  { label: 'About Me', href: '/#about' },
-  { label: 'Portfolio', href: '/#portfolio' },
-  { label: 'Services', href: '/#services' },
-  { label: 'Testimonial', href: '/#testimonial' },
-  {
-    label: 'Blog',
-    href: '/blog-list',
-    subMenu: [
-      { label: 'Blog', href: '/blog-list' },
-      { label: 'Blog Page', href: '/blog-list' },
-      { label: 'Blog List', href: '/blog-list' },
-      { label: 'Blog Right Sidebar', href: '/blog-list' },
-      { label: 'Blog Details', href: '/blog-list' }
-    ]
-  },
-  { label: 'Contact', href: '#contact' }
-]
+  set(val: boolean) {
+    colorMode.preference = val ? 'dark' : 'light'
+  }
+})
 
 const handleScroll = () => {
   if (typeof window !== 'undefined') {
@@ -119,26 +103,29 @@ const handleScroll = () => {
 
 const toggleTheme = () => {
   isDark.value = !isDark.value
+  syncClasses(isDark.value)
+}
+
+const syncClasses = (dark: boolean) => {
   if (typeof document !== 'undefined') {
-    if (isDark.value) {
-      document.body.classList.add('dark')
-      localStorage.setItem('theme', 'dark')
-    } else {
-      document.body.classList.remove('dark')
-      localStorage.setItem('theme', 'light')
-    }
+    document.documentElement.classList.toggle('dark', dark)
+    document.body.classList.toggle('dark', dark)
   }
 }
+
+watch(
+  () => colorMode.value,
+  (val) => {
+    syncClasses(val === 'dark')
+  },
+  { immediate: true }
+)
 
 onMounted(() => {
   if (typeof window !== 'undefined') {
     window.addEventListener('scroll', handleScroll)
     handleScroll()
-    const savedTheme = localStorage.getItem('theme')
-    if (savedTheme === 'dark') {
-      isDark.value = true
-      document.body.classList.add('dark')
-    }
+    syncClasses(colorMode.value === 'dark')
   }
 })
 

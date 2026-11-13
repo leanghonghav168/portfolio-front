@@ -1,0 +1,22 @@
+{
+  "name": "Leang Honghav - Lead Product Designer & Full-Stack UI Developer",
+  "short_name": "Honghav Portfolio",
+  "description": "Portfolio of Leang Honghav, showcasing product design projects, client work, web applications, and UI/UX services.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c0c0e",
+  "theme_color": "#feb83c",
+  "icons": [
+    {
+      "src": "/images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+

@@ -1,2 +1,8 @@
-User-Agent: *
-Disallow:
+User-agent: *
+Allow: /
+
+# Host
+Host: https://leanghonghav.dev
+
+# Sitemaps
+Sitemap: https://leanghonghav.dev/sitemap.xml

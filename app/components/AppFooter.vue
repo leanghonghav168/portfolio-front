@@ -15,3 +15,46 @@
   </footer>
 </template>
 
+<style scoped>
+footer {
+  background-color: #ffffff;
+  border-top: 1px solid #f1f2f4;
+  padding: 30px 0;
+  transition: all 0.3s ease;
+}
+
+.footer-content h4 {
+  font-family: var(--ff-syne), sans-serif;
+  font-weight: 700;
+  color: #0f0e0e;
+}
+
+.copy-right {
+  font-family: var(--ff-manrope), sans-serif;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.copy-right a {
+  color: #0f0e0e;
+  font-weight: 600;
+}
+
+:global(.dark) footer {
+  background-color: #09090b;
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+:global(.dark) .footer-content h4 {
+  color: #ffffff;
+}
+
+:global(.dark) .copy-right {
+  color: #9ca3af;
+}
+
+:global(.dark) .copy-right a {
+  color: #ffffff;
+}
+</style>
+
