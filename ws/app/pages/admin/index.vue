@@ -39,7 +39,7 @@
       <div class="col-xl-3 col-sm-6 col-12">
         <div class="stat-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between">
           <div class="d-flex align-items-center justify-content-between mb-3">
-            <span class="stat-icon-wrapper icon-orange">
+            <span class="stat-icon-wrapper icon-bw">
               <i class="bi bi-folder-fill"></i>
             </span>
             <span class="stat-trend fw-bold">Live</span>
@@ -59,7 +59,7 @@
       <div class="col-xl-3 col-sm-6 col-12">
         <div class="stat-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between">
           <div class="d-flex align-items-center justify-content-between mb-3">
-            <span class="stat-icon-wrapper icon-blue">
+            <span class="stat-icon-wrapper icon-bw">
               <i class="bi bi-cpu-fill"></i>
             </span>
             <span class="stat-trend fw-bold">Active</span>
@@ -79,7 +79,7 @@
       <div class="col-xl-3 col-sm-6 col-12">
         <div class="stat-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between">
           <div class="d-flex align-items-center justify-content-between mb-3">
-            <span class="stat-icon-wrapper icon-green">
+            <span class="stat-icon-wrapper icon-bw">
               <i class="bi bi-briefcase-fill"></i>
             </span>
             <span class="stat-trend fw-bold">15+ Yrs</span>
@@ -101,7 +101,7 @@
       <div class="col-xl-3 col-sm-6 col-12">
         <div class="stat-card p-4 rounded-4 h-100 d-flex flex-column justify-content-between">
           <div class="d-flex align-items-center justify-content-between mb-3">
-            <span class="stat-icon-wrapper icon-purple">
+            <span class="stat-icon-wrapper icon-bw">
               <i class="bi bi-envelope-fill"></i>
             </span>
             <span v-if="unreadCount > 0" class="badge-unread">
@@ -449,7 +449,7 @@ const formatTime = (isoString?: string) => {
   box-shadow: 0 0 8px #e76f2b;
 }
 
-/* Stat Cards */
+/* Stat Cards - Black & White Style */
 .stat-card {
   background-color: #ffffff;
   border: 1px solid #e5e7eb;
@@ -463,8 +463,13 @@ const formatTime = (isoString?: string) => {
 
 .stat-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  border-color: #e76f2b;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-color: #000000;
+}
+
+:global(.dark) .stat-card:hover {
+  border-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.04);
 }
 
 .stat-icon-wrapper {
@@ -475,32 +480,43 @@ const formatTime = (isoString?: string) => {
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
+  background-color: #000000;
+  color: #ffffff;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.icon-orange {
-  background-color: rgba(231, 111, 43, 0.15);
-  color: #e76f2b;
+:global(.dark) .stat-icon-wrapper {
+  background-color: #ffffff;
+  color: #000000;
 }
 
-.icon-blue {
-  background-color: rgba(59, 130, 246, 0.15);
-  color: #3b82f6;
-}
-
-.icon-green {
-  background-color: rgba(16, 185, 129, 0.15);
-  color: #10b981;
-}
-
+.icon-bw,
+.icon-orange,
+.icon-blue,
+.icon-green,
 .icon-purple {
-  background-color: rgba(139, 92, 246, 0.15);
-  color: #8b5cf6;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+:global(.dark) .icon-bw,
+:global(.dark) .icon-orange,
+:global(.dark) .icon-blue,
+:global(.dark) .icon-green,
+:global(.dark) .icon-purple {
+  background-color: #ffffff !important;
+  color: #000000 !important;
 }
 
 .stat-number {
   font-family: var(--ff-syne), 'Syne', sans-serif;
   font-weight: 800;
   font-size: 2.2rem;
+  color: #000000;
+}
+
+:global(.dark) .stat-number {
+  color: #ffffff;
 }
 
 .stat-label {
@@ -509,37 +525,60 @@ const formatTime = (isoString?: string) => {
   font-weight: 600;
 }
 
+:global(.dark) .stat-label {
+  color: #9ca3af;
+}
+
 .stat-trend {
   font-size: 0.75rem;
-  color: #10b981;
-  background-color: rgba(16, 185, 129, 0.1);
-  padding: 3px 8px;
+  color: #000000;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  padding: 3px 10px;
   border-radius: 20px;
+  font-weight: 700;
+}
+
+:global(.dark) .stat-trend {
+  color: #ffffff;
+  background-color: #1e1e26;
+  border-color: #2b2b38;
 }
 
 .badge-unread {
   font-size: 0.75rem;
   font-weight: 700;
-  background-color: #ef4444;
+  background-color: #000000;
   color: #ffffff;
-  padding: 3px 8px;
+  padding: 3px 10px;
   border-radius: 20px;
+  border: 1px solid #000000;
+}
+
+:global(.dark) .badge-unread {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
 }
 
 .stat-link {
   font-size: 0.82rem;
   font-weight: 700;
-  color: #4b5563;
-  transition: color 0.2s ease;
+  color: #111827;
+  transition: all 0.2s ease;
 }
 
 :global(.dark) .stat-link {
-  color: #9ca3af;
+  color: #e5e7eb;
   border-color: #22222a !important;
 }
 
 .stat-link:hover {
-  color: #e76f2b;
+  color: #000000;
+}
+
+:global(.dark) .stat-link:hover {
+  color: #ffffff;
 }
 
 /* Admin Panels */
