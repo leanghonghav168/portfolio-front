@@ -56,6 +56,18 @@
             <a href="#" target="_blank"><i class="fa-brands fa-dribbble"></i></a>
           </li>
         </ul>
+
+        <!-- Admin Dashboard Shortcut -->
+        <div class="mt-4 pt-3 border-top">
+          <NuxtLink
+            to="/admin"
+            class="btn btn-outline-warning btn-sm w-100 rounded-pill py-2 fw-bold d-flex align-items-center justify-content-center gap-2"
+            @click="$emit('close')"
+          >
+            <i class="bi bi-shield-lock-fill"></i>
+            <span>Admin CMS Dashboard</span>
+          </NuxtLink>
+        </div>
       </div>
     </div>
   </div>
