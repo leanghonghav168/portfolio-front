@@ -448,4 +448,83 @@ const currentSectionTitle = computed(() => {
   color: inherit;
   cursor: pointer;
 }
+
+/* ==========================================================================
+   Global Admin Forms: Pure White Background & Pure Black Text
+   ========================================================================== */
+:global(.admin-shell .form-control),
+:global(.admin-shell .form-select),
+:global(.admin-shell input[type="text"]),
+:global(.admin-shell input[type="url"]),
+:global(.admin-shell input[type="email"]),
+:global(.admin-shell input[type="number"]),
+:global(.admin-shell input[type="search"]),
+:global(.admin-shell input[type="password"]),
+:global(.admin-shell textarea),
+:global(.admin-shell select),
+:global(.modal-card-custom .form-control),
+:global(.modal-card-custom .form-select),
+:global(.modal-card-custom input[type="text"]),
+:global(.modal-card-custom input[type="url"]),
+:global(.modal-card-custom input[type="email"]),
+:global(.modal-card-custom input[type="number"]),
+:global(.modal-card-custom textarea),
+:global(.modal-card-custom select) {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1.5px solid #d1d5db !important;
+  font-weight: 500 !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+:global(.admin-shell .form-control::placeholder),
+:global(.admin-shell input::placeholder),
+:global(.admin-shell textarea::placeholder),
+:global(.modal-card-custom .form-control::placeholder),
+:global(.modal-card-custom input::placeholder),
+:global(.modal-card-custom textarea::placeholder) {
+  color: #64748b !important;
+  opacity: 1 !important;
+}
+
+:global(.admin-shell .form-control:focus),
+:global(.admin-shell .form-select:focus),
+:global(.admin-shell input:focus),
+:global(.admin-shell textarea:focus),
+:global(.admin-shell select:focus),
+:global(.modal-card-custom .form-control:focus),
+:global(.modal-card-custom .form-select:focus),
+:global(.modal-card-custom input:focus),
+:global(.modal-card-custom textarea:focus),
+:global(.modal-card-custom select:focus) {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #e76f2b !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(231, 111, 43, 0.25) !important;
+}
+
+/* Dropdown option text and bg */
+:global(.admin-shell select option),
+:global(.modal-card-custom select option) {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+/* Form labels high contrast */
+:global(.admin-shell .form-label),
+:global(.modal-card-custom .form-label) {
+  color: #111827 !important;
+  font-weight: 700 !important;
+}
+
+:global(.dark) :global(.admin-shell .form-label),
+:global(.dark) :global(.modal-card-custom .form-label) {
+  color: #f9fafb !important;
+  font-weight: 700 !important;
+}
+
+:global(.dark) :global(.admin-shell .form-check-label) {
+  color: #f9fafb !important;
+}
 </style>

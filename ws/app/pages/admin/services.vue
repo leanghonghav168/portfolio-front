@@ -257,4 +257,48 @@ const confirmDeleteService = async (id: number) => {
 }
 
 .fs-7 { font-size: 0.85rem; }
+
+/* All forms: black text and white background */
+.form-control,
+.form-select,
+input,
+textarea,
+select {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1.5px solid #d1d5db !important;
+  font-weight: 500 !important;
+}
+
+.form-control::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: #64748b !important;
+  opacity: 1 !important;
+}
+
+.form-control:focus,
+.form-select:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #e76f2b !important;
+  box-shadow: 0 0 0 3px rgba(231, 111, 43, 0.25) !important;
+}
+
+select option {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.form-label {
+  color: #111827;
+  font-weight: 700;
+}
+
+:global(.dark) .form-label {
+  color: #f9fafb !important;
+}
 </style>

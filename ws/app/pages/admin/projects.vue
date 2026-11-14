@@ -653,4 +653,33 @@ const confirmDeleteProject = async (id: number) => {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* All forms: black text and white background */
+.form-control,
+input,
+textarea,
+select {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 1.5px solid #d1d5db !important;
+  font-weight: 500 !important;
+}
+
+.form-control:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #e76f2b !important;
+  box-shadow: 0 0 0 3px rgba(231, 111, 43, 0.25) !important;
+}
+
+.form-label {
+  color: #111827;
+}
+
+:global(.dark) .form-label {
+  color: #f9fafb !important;
+}
 </style>
