@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://leanghonghav.dev
+Host: https://portfolio.leanghonghav.site
 
 # Sitemaps
-Sitemap: https://leanghonghav.dev/sitemap.xml
+Sitemap: https://portfolio.leanghonghav.site/sitemap.xml

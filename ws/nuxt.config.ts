@@ -51,7 +51,10 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      apiBase: process.env.NUXT_PUBLIC_API_BASE || 'http://localhost:3001/api'
+      apiBase: process.env.NUXT_PUBLIC_API_BASE || 'http://localhost:3001/api',
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://portfolio.leanghonghav.site',
+      author: process.env.NUXT_PUBLIC_AUTHOR || 'Leang Honghav',
+      title: process.env.NUXT_PUBLIC_TITLE || 'Leang Honghav | Lead Product Designer & Full-Stack UI Developer'
     }
   }
 })

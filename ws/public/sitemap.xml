@@ -2,40 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://leanghonghav.dev/</loc>
-    <lastmod>2026-11-13</lastmod>
+    <loc>https://portfolio.leanghonghav.site/</loc>
+    <lastmod>2026-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://leanghonghav.dev/images/hero/profile.webp</image:loc>
+      <image:loc>https://portfolio.leanghonghav.site/images/hero/profile.webp</image:loc>
       <image:title>Leang Honghav - Lead Product Designer Portrait</image:title>
       <image:caption>Portrait of Leang Honghav, Lead Product Designer and Developer</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://leanghonghav.dev/images/hero/hero-banner-art.png</image:loc>
+      <image:loc>https://portfolio.leanghonghav.site/images/hero/hero-banner-art.png</image:loc>
       <image:title>Leang Honghav Portfolio Banner</image:title>
       <image:caption>Showcase of design systems and creative UI works</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://leanghonghav.dev/images/projects/basinik-finance.jpg</image:loc>
+      <image:loc>https://portfolio.leanghonghav.site/images/projects/basinik-finance.jpg</image:loc>
       <image:title>Basinik Finance App - Fintech Project</image:title>
       <image:caption>Financial mobile analytics and wealth management UI</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://leanghonghav.dev/images/projects/oxilex-dashboard.jpg</image:loc>
+      <image:loc>https://portfolio.leanghonghav.site/images/projects/oxilex-dashboard.jpg</image:loc>
       <image:title>Oxilex Dashboard Design - Web App Project</image:title>
       <image:caption>Event booking and analytics dashboard design</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://leanghonghav.dev/images/projects/project-loan.png</image:loc>
+      <image:loc>https://portfolio.leanghonghav.site/images/projects/project-loan.png</image:loc>
       <image:title>Loan Management System</image:title>
       <image:caption>Enterprise financial loan management interface</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://leanghonghav.dev/images/projects/project-food.png</image:loc>
+      <image:loc>https://portfolio.leanghonghav.site/images/projects/project-food.png</image:loc>
       <image:title>Papa Food E-Commerce Platform</image:title>
       <image:caption>Multi-vendor food ordering and restaurant dashboard</image:caption>
     </image:image>
   </url>
 </urlset>
-

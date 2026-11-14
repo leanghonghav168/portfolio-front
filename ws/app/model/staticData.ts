@@ -22,14 +22,14 @@ import type {
  * Global Site & SEO Metadata Configuration
  */
 export const siteMetaConfig: SiteMetaConfig = {
-  siteUrl: 'https://leanghonghav.dev',
+  siteUrl: 'https://portfolio.leanghonghav.site',
   title: 'Leang Honghav | Lead Product Designer & Full-Stack UI Developer',
   description:
     'Portfolio of Leang Honghav, a Lead Product Designer & Full-Stack UI Developer with 15+ years of experience designing high-impact digital experiences, design systems, and modern web applications in Germany and worldwide.',
   keywords:
     'Leang Honghav, Product Designer, UI/UX Designer, Frontend Developer, Design Systems, Nuxt 3, Vue 3, Figma, Full-Stack UI, Web Developer Germany, Interactive Prototypes, Enterprise SaaS',
   author: 'Leang Honghav',
-  ogImage: 'https://leanghonghav.dev/images/hero/hero-banner-art.png',
+  ogImage: 'https://portfolio.leanghonghav.site/images/hero/hero-banner-art.png',
   twitterHandle: '@leanghonghav'
 }
 
